@@ -3,6 +3,7 @@
 #include <random>
 using namespace std;
 
+
 int distanceLevinshteinIter(string firstWord, string secondWord);
 int distanceLevinshteinRec(string w1, int len1, string w2, int len2, int **Matrix);
 int distanceLevinshteinRecCache(string firstWord, int len1, string secondWord, int len2);
@@ -94,7 +95,7 @@ void secondMode(){
     cout << "\n\n";
 
     cout << "Execution time of recursion algorithm:\n";
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 5; i++) {
         QueryPerformanceCounter(&st1);
         distanceLevinshteinRec(Arr[2*i], 2*(i+1), Arr[2*i+1], 2*(i+1), NULL);
         QueryPerformanceCounter(&et1);
@@ -129,39 +130,8 @@ void secondMode(){
     for (int i = 0; i < 14; i++) {
         delete[] Arr[i];
     }
+
     delete[] Arr;
-
-            for (int counter = 0; counter < 10; counter++) {
-            QueryPerformanceCounter(&st1);
-
-            QueryPerformanceCounter(&et1);
-//
-//            QueryPerformanceCounter(&st2);
-//            multiplyMatrixWithVinogradsAlg(A,20*i, 20*i, B, 20*i, 20*i);
-//            QueryPerformanceCounter(&et2);
-//
-//            //Calculating of execution time of algorithms
-//            dt1.QuadPart = ((et1.QuadPart - st1.QuadPart) * 1000000000) / freq.QuadPart;
-//            dt2.QuadPart = ((et2.QuadPart - st2.QuadPart) * 1000000000) / freq.QuadPart;
-//
-//            cout << "Execution time of usual algorithm:" << dt1.QuadPart << " ns\n";
-//            cout << "Execution time of Vinograd's algorithm:" << dt2.QuadPart << " ns\n";
-//        }
-//
-//        // Freeing dynamic memory storage matrix A
-//        for (int j = 0; j < 20*i; ++j){
-//            delete[] A[j];
-//        }
-//        delete[] A;
-//
-//        // Freeing dynamic memory storage matrix B
-//        for (int j = 0; j < 20*i; ++j){
-//            delete[] B[j];
-//        }
-//        delete[] B;
-//        cout << "\n";
-//    }
-    }
 }
 
 int distanceLevinshteinRecCache(string w1, int len1, string w2, int len2){
