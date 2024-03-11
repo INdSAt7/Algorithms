@@ -57,7 +57,7 @@ void firstMode(){
     cout << "Result Rec method with cache: " << c << "\n";
 
     int d = distanceDamerauLevinshtein(firstWord, firstWord.length(), secondWord , secondWord.length());
-    cout << "Result Damerau - Levenshtein method: " << c << "\n";
+    cout << "Result Damerau - Levenshtein method: " << d << "\n";
 }
 
 void secondMode(){
@@ -249,13 +249,13 @@ int distanceDamerauLevinshtein(string w1, int len1, string w2, int len2){
             else
                 replaceCost = 1;
 
-            Matrix[i][j] = minimum(Matrix[i - 1][j] + deleteCost, //deletion
+            Matrix[i][j] = minimum(Matrix[i - 1][j] + deleteCost, // deletion
                                    Matrix[i][j - 1] + insertCost, // insertion
                                    Matrix[i - 1][j - 1] + replaceCost); // replacement
 
             if (i > 1 && j > 1 && w1[i - 1] == w2[j - 2] && w1[i - 2] == w2[j - 1])
             {
-                Matrix[i][j] = minimum(Matrix[i][j],Matrix[i - 2][j - 2] + 1); // перестановка
+                Matrix[i][j] = minimum(Matrix[i][j], Matrix[i - 2][j - 2] + 1); // transposition
             }
         }
     }
@@ -327,15 +327,4 @@ int **createArr(int rows, int cols){ //Creating matrix
     }
 
     return Matrix;
-}
-
-char **createArrStr(int numberofWords, int len){ //Creating matrix
-    char **Arr = new char* [numberofWords];
-
-    for (int i = 0; i < numberofWords; i++)
-    {
-        Arr[i] = new char [len];
-    }
-
-    return Arr;
 }
