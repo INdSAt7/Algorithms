@@ -10,6 +10,7 @@ int* matrixCompression1(int **Matrix, int *D, int &rows, int &cols);
 int* matrixAddition1(int *AN1, int *AN2, int *D1, int *D2, int &n, int &counter, int *DC);
 int** matrixUnpacking1(int *Matrix, int *D, int &n);
 int firstPart();
+void prepareForCompression(int **Matrix, int *AN, int *NR, int *NC, int *JR, int *JC, int &n, int &m);
 
 int main(){
     int mode;
@@ -285,22 +286,72 @@ int firstPart(){
     delete[] Result;
 }
 
-int matrixCompression2(int **Matrix, int *AN, int *NR, int *NC, int *JR, int *JC){
+void matrixCompression2(int **Matrix, int *AN, int *NR, int *NC, int *JR, int *JC, int &n, int &m) {
+    int NNZ = 0; // Количество ненулевых элементов
 
+    // Инициализация JR и JC значениями -1
+    for (int i = 0; i < n; i++) {
+        JR[i] = -1;
+    }
+    for (int i = 0; i < m; i++) {
+        JC[i] = -1;
+    }
+
+    // Проходим по всей матрице
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (Matrix[i][j] != 0) {
+                if (JR[i] == -1) {
+                    JR[i] = NNZ; // Обновляем индекс начала строки
+                }
+                if (JC[j] == -1) {
+                    JC[j] = NNZ; // Обновляем индекс начала столбца
+                }
+
+                AN[NNZ] = Matrix[i][j]; // Добавляем ненулевой элемент
+                NR[NNZ] = i; // Запоминаем номер строки
+                NC[NNZ] = j; // Запоминаем номер столбца
+                NNZ++;
+            }
+        }
+    }
+
+    // Завершаем заполнение JC
+    for (int j = 0; j < m; ++j)
+        if (JC[j] == -1) {
+            JC[j] = NNZ; // Если столбец полностью нулевой, обновляем индекс начала столбца
+
+            // Завершаем заполнение JR
+            JR[n] = NNZ; // Запоминаем индекс конца последней строки
+        }
 }
 
-int secondPart(){
+
+int secondPart() {
     int n1, m1, n2, m2, CSize;
+    int *AN1, *NR1, *NC1, *JR1, *JC1, *AN2, *NR2, *NC2, *JR2, *JC2;
+    int **Matrix1, **Matrix2;
 
-    int **Matrix1 = readMatrixFromFile("matrix1.txt", n1, m1);
-    int **Matrix2 = readMatrixFromFile("matrix2.txt", n2, m2);
+    prepareForCompression(Matrix1, AN1, NR1, NC1, JR1, JC1, n1, m1);
+    prepareForCompression(Matrix2, AN2, NR2, NC2, JR2, JC2, n2, m2);
+}
 
-    int *AN1;
-    int *AN2;
+void prepareForCompression(int **Matrix, int *AN, int *NR, int *NC, int *JR, int *JC, int &n, int &m){
+     Matrix = readMatrixFromFile("matrix1.txt", n, m);
 
-    cout << "Matrix 1:\n";
-    printMatrix(Matrix1, n1, m1);
+    int counter = 0;
 
-    cout << "Matrix 2:\n";
-    printMatrix(Matrix2, n2, m2);
+    cout << "Matrix:\n";
+    printMatrix(Matrix, n, m);
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            if (Matrix[i][j] != 0)
+                counter += 1;
+
+    AN = new int[counter];
+    NR = new int[counter];
+    NC = new int[counter];
+    JR = new int[n];
+    JC = new int[m];
 }
