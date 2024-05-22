@@ -43,10 +43,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\Utilities\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Utilities\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\Utilities\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "D:\Utilities\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -72,15 +72,15 @@ CMakeFiles/LR2.dir/main.cpp.obj: CMakeFiles/LR2.dir/flags.make
 CMakeFiles/LR2.dir/main.cpp.obj: D:/Study/BMSTU/Algorithms/1sem/LR3/main.cpp
 CMakeFiles/LR2.dir/main.cpp.obj: CMakeFiles/LR2.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Study\BMSTU\Algorithms\1sem\LR3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LR2.dir/main.cpp.obj"
-	"D:\Utilities\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LR2.dir/main.cpp.obj -MF CMakeFiles\LR2.dir\main.cpp.obj.d -o CMakeFiles\LR2.dir\main.cpp.obj -c D:\Study\BMSTU\Algorithms\1sem\LR3\main.cpp
+	"D:\Utilities\CLion 2023.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LR2.dir/main.cpp.obj -MF CMakeFiles\LR2.dir\main.cpp.obj.d -o CMakeFiles\LR2.dir\main.cpp.obj -c D:\Study\BMSTU\Algorithms\1sem\LR3\main.cpp
 
 CMakeFiles/LR2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LR2.dir/main.cpp.i"
-	"D:\Utilities\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Study\BMSTU\Algorithms\1sem\LR3\main.cpp > CMakeFiles\LR2.dir\main.cpp.i
+	"D:\Utilities\CLion 2023.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Study\BMSTU\Algorithms\1sem\LR3\main.cpp > CMakeFiles\LR2.dir\main.cpp.i
 
 CMakeFiles/LR2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LR2.dir/main.cpp.s"
-	"D:\Utilities\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Study\BMSTU\Algorithms\1sem\LR3\main.cpp -o CMakeFiles\LR2.dir\main.cpp.s
+	"D:\Utilities\CLion 2023.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Study\BMSTU\Algorithms\1sem\LR3\main.cpp -o CMakeFiles\LR2.dir\main.cpp.s
 
 # Object files for target LR2
 LR2_OBJECTS = \
