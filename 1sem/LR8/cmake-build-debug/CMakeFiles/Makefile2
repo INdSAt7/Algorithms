@@ -44,25 +44,25 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\Utilities\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Utilities\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\Utilities\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "D:\Utilities\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Study\BMSTU\Algorithms\1sem\LR4
+CMAKE_SOURCE_DIR = D:\Study\BMSTU\Algorithms\1sem\LR8
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Study\BMSTU\Algorithms\1sem\LR4\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Study\BMSTU\Algorithms\1sem\LR8\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/LR2.dir/all
+all: CMakeFiles/LR8.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/LR2.dir/clean
+clean: CMakeFiles/LR8.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/LR2.dir
+# Target rules for target CMakeFiles/LR8.dir
 
 # All Build rule for target.
-CMakeFiles/LR2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LR2.dir\build.make CMakeFiles/LR2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LR2.dir\build.make CMakeFiles/LR2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Study\BMSTU\Algorithms\1sem\LR4\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target LR2"
-.PHONY : CMakeFiles/LR2.dir/all
+CMakeFiles/LR8.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LR8.dir\build.make CMakeFiles/LR8.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LR8.dir\build.make CMakeFiles/LR8.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Study\BMSTU\Algorithms\1sem\LR8\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target LR8"
+.PHONY : CMakeFiles/LR8.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/LR2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Study\BMSTU\Algorithms\1sem\LR4\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LR2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Study\BMSTU\Algorithms\1sem\LR4\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/LR2.dir/rule
+CMakeFiles/LR8.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Study\BMSTU\Algorithms\1sem\LR8\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LR8.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Study\BMSTU\Algorithms\1sem\LR8\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/LR8.dir/rule
 
 # Convenience name for target.
-LR2: CMakeFiles/LR2.dir/rule
-.PHONY : LR2
+LR8: CMakeFiles/LR8.dir/rule
+.PHONY : LR8
 
 # clean rule for target.
-CMakeFiles/LR2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LR2.dir\build.make CMakeFiles/LR2.dir/clean
-.PHONY : CMakeFiles/LR2.dir/clean
+CMakeFiles/LR8.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LR8.dir\build.make CMakeFiles/LR8.dir/clean
+.PHONY : CMakeFiles/LR8.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

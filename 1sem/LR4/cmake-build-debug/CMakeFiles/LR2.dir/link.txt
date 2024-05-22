@@ -1,3 +1,0 @@
-"D:\Utilities\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\LR2.dir/objects.a
-"D:\Utilities\CLion 2023.2.2\bin\mingw\bin\ar.exe" qc CMakeFiles\LR2.dir/objects.a @CMakeFiles\LR2.dir\objects1.rsp
-"D:\Utilities\CLion 2023.2.2\bin\mingw\bin\g++.exe" -g -Wl,--whole-archive CMakeFiles\LR2.dir/objects.a -Wl,--no-whole-archive -o LR2.exe -Wl,--out-implib,libLR2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\LR2.dir\linkLibs.rsp
