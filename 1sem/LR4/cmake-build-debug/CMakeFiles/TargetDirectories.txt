@@ -1,3 +1,0 @@
-D:/Study/BMSTU/Algorithms/1sem/LR4/cmake-build-debug/CMakeFiles/LR2.dir
-D:/Study/BMSTU/Algorithms/1sem/LR4/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Study/BMSTU/Algorithms/1sem/LR4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

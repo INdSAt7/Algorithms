@@ -1,0 +1,17 @@
+# ninja log v5
+2	301	7381824080949830	CMakeFiles/Part3.dir/main.cpp.obj	d0dbdeb471f217bc
+8	391	7381765988478534	CMakeFiles/Part3.dir/matrix_mul_krm.cpp.obj	a834af2d259c06a7
+301	371	7381824081612116	Part3.exe	8e33643f939aef65
+0	340	7381824689304115	CMakeFiles/Part2.dir/matrix.cpp.obj	b99eeffba3d599b6
+2	433	7381765988847007	CMakeFiles/Part3.dir/matrix.cpp.obj	7a7a277ebfdb9285
+5	448	7381765989038649	CMakeFiles/Part3.dir/matrix_sum_krm.cpp.obj	d448ef0c6019c070
+0	111	7381826374088509	build.ninja	e250dec36199f05b
+2	314	7381824689045913	CMakeFiles/Part2.dir/matrix_mul_krm.cpp.obj	3545ca1245c516b9
+3	345	7381824689362861	CMakeFiles/Part2.dir/main.cpp.obj	2d31df26c7ec3101
+5	367	7381824689582356	CMakeFiles/Part2.dir/matrix_sum_krm.cpp.obj	7320f06e722a4bde
+367	436	7381824690241482	Part2.exe	fbcf40f658f8c02f
+0	80	7381826374088509	build.ninja	e250dec36199f05b
+1	321	7381827412184079	CMakeFiles/Part2.dir/main.cpp.obj	2d31df26c7ec3101
+322	394	7381827412868827	Part2.exe	fbcf40f658f8c02f
+2	331	7381828136045053	CMakeFiles/Part2.dir/main.cpp.obj	2d31df26c7ec3101
+331	403	7381828136745094	Part2.exe	fbcf40f658f8c02f
