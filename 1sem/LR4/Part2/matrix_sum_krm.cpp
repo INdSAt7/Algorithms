@@ -249,35 +249,35 @@ void unpackMatrixByKrm(matrix &m) {
 // Выводит массивы массивы запакованной матрицы Рейндбольдта - Местеньи
 void printPackMatrixByKRM(matrix rm) {
     cout << endl;
-    cout << "[Массив AN]: ";
+    cout << "[Array AN]: ";
 
     for (int i = 0; i < rm.an.size(); ++i) {
         cout << rm.an[i] << " ";
     }
 
     cout << endl;
-    cout << "[Массив NR]: ";
+    cout << "[Array NR]: ";
 
     for (int i = 0; i < rm.nr.size(); ++i) {
         cout << rm.nr[i] << " ";
     }
 
     cout << endl;
-    cout << "[Массив NC]: ";
+    cout << "[Array NC]: ";
 
     for (int i = 0; i < rm.nc.size(); ++i) {
         cout << rm.nc[i] << " ";
     }
 
     cout << endl;
-    cout << "[Массив JR]: ";
+    cout << "[Array JR]: ";
 
     for (int i = 0; i < rm.rows; ++i) {
         cout << rm.jr[i] << " ";
     }
 
     cout << endl;
-    cout << "[Массив JC]: ";
+    cout << "[Array JC]: ";
 
     for (int i = 0; i < rm.cols; ++i) {
         cout << rm.jc[i] << " ";

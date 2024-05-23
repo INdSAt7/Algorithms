@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <filesystem>
 #include "matrix.h"
 #include "matrix_sum_krm.h"
 
@@ -14,15 +15,15 @@ void compareMatrices(matrix &, matrix &);
 
 int main() {
     // Сложение сжатых матриц
-    cout<<"ADDITION OF COMPRESSED MATRICES\n";
-    matrix matrix_rm_1 = readMatrixFromFile("source\\matrixRM1.txt");
+    cout<<"ADDITION OF COMPRESSED MATRICES";
+    matrix matrix_rm_1 = readMatrixFromFile("../source/matrix_rm_1.txt");
 
     packMatrixByKrm(matrix_rm_1);
 
     cout << endl<< endl << "First matrix in compressed condition\n";
     printPackMatrixByKRM(matrix_rm_1);
 
-    matrix matrix_rm_2 = readMatrixFromFile("sourc\\matrix_rm_2.txt");
+    matrix matrix_rm_2 = readMatrixFromFile("../source/matrix_rm_2.txt");
 
     packMatrixByKrm(matrix_rm_2);
 
@@ -42,14 +43,14 @@ int main() {
 
     // Умножение сжатых матриц
     cout<<"MULTIPLYING OF COMPRESSED MATRICES\n";
-    matrix matrix_rm_3 = readMatrixFromFile("source\\multiplying1.txt");
+    matrix matrix_rm_3 = readMatrixFromFile("../source/multiplying1.txt");
 
     packMatrixByKrm(matrix_rm_3);
 
     cout << endl << "Third matrix in compressed condition\n";
     printPackMatrixByKRM(matrix_rm_3);
 
-    matrix matrix_rm_4 = readMatrixFromFile("source\\multiplying2.txt");
+    matrix matrix_rm_4 = readMatrixFromFile("../source/multiplying2.txt");
 
     packMatrixByKrm(matrix_rm_4);
 
@@ -57,12 +58,12 @@ int main() {
     printPackMatrixByKRM(matrix_rm_4);
 
     cout << endl<< endl << "Result of multiplying";
-    matrix mul_matrix_krm=mulPackMatrixByKRM(matrix_rm_3, matrix_rm_4);
+    matrix mul_matrix_krm = mulPackMatrixByKRM(matrix_rm_3, matrix_rm_4);
     printPackMatrixByKRM(mul_matrix_krm);
     unpackMatrixByKrm(mul_matrix_krm);
 
     cout << endl<< endl << "Regular matrix after multiplying\n";
-    matrix mul_matrix=mulMatrix(matrix_rm_3, matrix_rm_4);
+    matrix mul_matrix = mulMatrix(matrix_rm_3, matrix_rm_4);
     printMatrix(mul_matrix);
 
     compareMatrices(mul_matrix_krm, mul_matrix);
@@ -143,7 +144,7 @@ void printMatrix(matrix m) {
     printf("Result matrix %dx%d:\n", m.rows, m.cols);
     for (int i = 0; i < m.rows; i++) {
         for (int j = 0; j < m.cols; j++) {
-            cout << m.matrix[i][j] << " ";
+            cout << m.matrix[i][j] << "\t";
         }
 
         cout << endl;
@@ -172,20 +173,21 @@ matrix sumMatrix(matrix &a, matrix &b) {
 // Функция для умножения двух матриц
 matrix mulMatrix(matrix &a, matrix &b) {
     if (a.cols != b.rows) {
-        cout << "Number of columns of the first matrix not equal to number of rows of the second matrix. Multiplying is impossible"
-             << endl;
+        cout << "Number of columns of the first matrix not equal to number of rows of the second matrix. Multiplying is impossible" << endl;
         exit(0);
     }
 
     matrix c;
-    c.matrix = new int *[a.rows];
     c.rows = a.rows;
     c.cols = b.cols;
+    c.matrix = new int *[c.rows];
+    for (int i = 0; i < c.rows; ++i) {
+        c.matrix[i] = new int[c.cols]();
+    }
 
     for (int i = 0; i < a.rows; ++i) {
-        c.matrix[i] = new int[b.cols];
         for (int j = 0; j < b.cols; ++j) {
-            for (int k = 0; k < a.cols; k++) {
+            for (int k = 0; k < a.cols; ++k) {
                 c.matrix[i][j] += a.matrix[i][k] * b.matrix[k][j];
             }
         }
@@ -197,7 +199,7 @@ matrix mulMatrix(matrix &a, matrix &b) {
 // Функция для сравнения двух матриц в стандартном виде
 void compareMatrices(matrix &matrix_A, matrix &matrix_B) {
     if (matrix_A.rows != matrix_B.rows || matrix_A.cols != matrix_B.cols) {
-        printf("Матрицы имеют разный размер: A[%dx%d]!=B[%dx%d]\n",
+        printf("Matrices have different sizes: A[%dx%d]!=B[%dx%d]\n",
                matrix_A.rows, matrix_A.cols, matrix_B.rows, matrix_B.cols);
 
         return;
@@ -216,8 +218,8 @@ void compareMatrices(matrix &matrix_A, matrix &matrix_B) {
     }
 
     if (counter == 0) {
-        printf("Результирующие матрицы совпадают\n\n");
+        cout << "Matrices are equal\n\n";
     } else {
-        printf("Результирующие матрицы имеют %d отличий\n\n", counter);
+        cout << "Matrices has " << counter << " differences\n\n";
     }
 }
