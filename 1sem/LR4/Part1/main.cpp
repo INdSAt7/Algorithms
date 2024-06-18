@@ -284,24 +284,3 @@ int firstMode(){
     delete[] Matrix2;
     delete[] Result;
 }
-
-
-void prepareForCompression(int **Matrix, int *AN, int *NR, int *NC, int *JR, int *JC, int &n, int &m){
-     Matrix = readMatrixFromFile("matrix1.txt", n, m);
-
-    int counter = 0;
-
-    cout << "Matrix:\n";
-    printMatrix(Matrix, n, m);
-
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++)
-            if (Matrix[i][j] != 0)
-                counter += 1;
-
-    AN = new int[counter];
-    NR = new int[counter];
-    NC = new int[counter];
-    JR = new int[n];
-    JC = new int[m];
-}

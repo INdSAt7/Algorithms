@@ -1,0 +1,6 @@
+# ninja log v5
+7	387	7391884134264861	CMakeFiles/Part2_new_.dir/matrix_mul_krm.cpp.obj	847a2e86d2abdb9d
+0	447	7391884134875453	CMakeFiles/Part2_new_.dir/matrix.cpp.obj	fd44611d19bb118e
+3	456	7391884134960441	CMakeFiles/Part2_new_.dir/matrix_sum_krm.cpp.obj	57ecac701f4bdeee
+5	619	7391884136550549	CMakeFiles/Part2_new_.dir/main.cpp.obj	b835b426601d9a5a
+619	727	7391884137637612	Part2_new_.exe	36367bc0639d877f
